@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Skills from "../components/Skills/Skills.astro"
+---
+
+<Layout title="Javier Vidal">
+  <div class="relative flex flex-col justify-center border-green-500 min-h-[100vh]">
+    <div class="flex flex-col md:space-x-12 justify-center md:flex-row">
+      <div class="text-5xl md:text-6xl lg:text-7xl font-normal tracking-widest heroName">
+        <p class="text-sectionTitle">
+          <strong class="font-semibold text-heroName">J</strong>avier
+        </p>
+        <p class="text-sectionTitle">
+          <strong class="font-semibold text-heroName">A</strong>ndrés
+        </p>
+        <p class="text-sectionTitle">
+          <strong class="font-semibold text-heroName">Vi</strong>dal
+        </p>
+      </div>
+
+      <div class="flex flex-col py-3 space-y-7">
+        <div class="space-y-2">
+          <h2 class="font-medium text-yellow-400">
+            Desarrollador de software Fullstack
+          </h2>
+          <p class="font-normal leading-6 text-pText">
+            With 10+ years of experience designing user interfaces and
+            interactions for virtual courses in Latin America. I am proficient in
+            Figma, Adobe Illustrator, HTML, CSS, JavaScript, and GSAP. I am
+            committed to continuous learning and growth.
+          </p>
+        </div>
+        <div class="flex space-x-7 items-end">
+          <a href="#" ><img class="w-8" src="/github-hero.svg" alt="github-icon" /></a>
+          <a href="#" ><img class="w-8" src="/linkedin-hero.svg" alt="github-icon" /></a>
+          <a href="#" ><img class="w-8" src="/mail-hero.svg" alt="github-icon" /></a>
+        </div>
+        <div>
+          <a class="border border-black bg-yellow-400 text-black font-medium rounded-md py-1 px-2"
+            >Descargar CV
+          </a>
+        </div>
+        <!-- <a href="/indexDefault">defaultIndex</a> -->
+      </div>
+  </div>
+
+    <div class="absolute bottom-4 flex justify-center w-full">
+      <img src="/scroll.svg" alt="arrow-down" class="w-6">
+    </div>
+  </div>
+  <Skills/>
+</Layout>
+<style>
+  .heroName {
+    user-select: none;
+  }
+</style>

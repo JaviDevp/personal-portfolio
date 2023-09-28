@@ -1,0 +1,10 @@
+---
+
+const { name, src, alt } = Astro.props;
+console.log(src);
+---
+
+<div class="flex flex-col justify-center items-center">
+  <img src={"/skills/"+src} alt={alt}>
+  <span>{name}</span>
+</div>
