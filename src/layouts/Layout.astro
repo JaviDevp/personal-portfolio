@@ -21,10 +21,10 @@ const { title } = Astro.props;
   <body>
     <main class="flex flex-col items-center justify-center">
       <slot />
-      <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute inset-0 -z-10 overflow-x-hidden overflow-y-auto">
         <div class="shape1  bg-circleGradient " ></div>
-        <div class="shape2  bg-circleGradient hidden lg:flex" ></div>
-        <div class="shape3  bg-circleGradient hidden lg:flex" ></div>
+        <!-- <div class="shape2  bg-circleGradient hidden lg:flex" ></div> -->
+        <!-- <div class="shape3  bg-circleGradient hidden lg:flex" ></div> -->
         <div class="shape4  bg-circleGradient" ></div>
         <div class="shape5  bg-smallCircleGradient" ></div>
         <div class="shape6  bg-smallCircleGradient" ></div>
@@ -50,15 +50,16 @@ const { title } = Astro.props;
     left: -50px;
     top: -200px;
     /* top: -300px; */
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     border-radius: 100%;
     transform: translate(0%, 0%);
-    filter:blur(100px);
+    background: radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    filter:blur(80px);
     animation: leftCircles 3s;
   }
   .shape2 {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 500px;
     height: 500px;
@@ -80,10 +81,11 @@ const { title } = Astro.props;
     position: fixed;
     right: 50px;
     bottom: -150px;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     border-radius: 100%;
-    filter:blur(100px);
+    background: radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    filter:blur(50px);
     animation: rightCircles 3s;
   }
   .shape5 {
