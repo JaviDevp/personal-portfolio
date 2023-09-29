@@ -1,0 +1,45 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+const projects = [
+  {
+    id:1,
+    nombre: "Rompecabezas online",
+    description: "Lorem ipsum dolor sit amet consectetur.<br/> <span class='destacado'>palabras destacadas</span> Aliquet habitasse pharetra aliquet lobortis pellentesque porttitor.Nascetur nunc quis platea semper at purus lacus scelerisque. Pellentesque nunc ultricies elementum ornare mi magna faucibus tellus. In et cursus maecenas etiam nunc nunc id in dapibus. Tincidunt at mi id diam erat maecenas.",
+    //description: "Lorem <strong>ipsum</strong> dolor sit amet <strong>consectetur</strong>. Aliquet habitasse",
+    urlDemo: "",
+    urlCode: "asdf",
+    urlPlayStore: "",
+    urlPhoto: "https://images2.alphacoders.com/130/1308322.jpeg",
+    tags: ["React Js", "Tailwind", "Vercel", "React Query", "React Js", "Tailwind", "Vercel", "React Query", "React Js", "Tailwind", "Vercel", "React Query"]
+  },
+  {
+    id:2,
+    nombre: "Rompecabezas online",
+    description: "Lorem ipsum dolor sit amet consectetur. Aliquet habitasse pharetra aliquet lobortis pellentesque porttitor. Nascetur nunc quis platea semper at purus lacus scelerisque. Pellentesque nunc ultricies elementum ornare mi magna faucibus tellus. In et cursus maecenas etiam nunc nunc id in dapibus. Tincidunt at mi id diam erat maecenas.",
+    urlDemo: "",
+    urlCode: "asdf",
+    urlPlayStore: "",
+    urlPhoto: "https://images2.alphacoders.com/130/1308322.jpeg",
+    tags: ["React Js", "Tailwind", "Vercel", "React Query"]
+  }
+]
+---
+
+<section class="w-full">
+  <h2 class="text-sectionTitle text-4xl font-bold">Proyectos</h2>
+  <div class="flex flex-col mt-10 space-y-16">
+    {
+      projects.map(project => (
+        <ProjectCard
+          id={project.id}
+          nombre={project.nombre}
+          description={project.description}
+          urlDemo={project.urlDemo}
+          urlCode={project.urlCode}
+          urlPhoto={project.urlPhoto}
+          tags={project.tags}
+        />
+      ))
+    }
+  </div>
+</section>

@@ -8,9 +8,11 @@ module.exports = {
         sectionTitle: "#65B5FF",
         sectionSubtitle: "#E0F1FE",
         pText: "#C9E8FF",
+        textProject: "#8BA8C2",
         circleGradient: "#001F3F",
         smallCircleGradient: "#F0A500",
-        smallCircleGradientMoving: "#C70039"
+        smallCircleGradientMoving: "#C70039",
+        textFooter: "#8BA8C2"
       },
     },
   },

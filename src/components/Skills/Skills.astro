@@ -1,75 +1,30 @@
 ---
 import SkillCard from "./SkillCard.astro";
 const skillList = [
-  {
-    name: "HTML",
-    urlIcon: "html.svg",
-    alt: "Html icon"
-  },
-  {
-    name: "CSS",
-    urlIcon: "css.svg",
-    alt: "Css icon"
-  },
-  {
-    name: "JavaScript",
-    urlIcon: "javascript.svg",
-    alt: "JavaScript icon"
-  },
-  {
-    name: "React Js",
-    urlIcon: "react.svg",
-    alt: "React Js icon"
-  },
-  {
-    name: "Laravel",
-    urlIcon: "laravel.svg",
-    alt: "Laravel icon"
-  },
-  {
-    name: "Python",
-    urlIcon: "python.svg",
-    alt: "Python icon"
-  },
-  {
-    name: "Node Js",
-    urlIcon: "node.svg",
-    alt: "Node js icon"
-  },
-  {
-    name: "Flutter",
-    urlIcon: "flutter.svg",
-    alt: "Flutter icon"
-  },
-  {
-    name: "Postgres",
-    urlIcon: "postgres.svg",
-    alt: "Postgres icon"
-  },
-  {
-    name: "Figma",
-    urlIcon: "figma.svg",
-    alt: "Figma icon"
-  },
-  {
-    name: "Next Js",
-    urlIcon: "nextjs.svg",
-    alt: "Next Js icon"
-  },
-  {
-    name: "Git",
-    urlIcon: "git.svg",
-    alt: "Git icon"
-  },
+  { text: "HTML", urlIcon: "html.svg" },
+  { text: "CSS", urlIcon: "css.svg" },
+  { text: "JavaScript", urlIcon: "javascript.svg" },
+  { text: "React Js", urlIcon: "react.svg" },
+  { text: "Laravel", urlIcon: "laravel.svg" },
+  { text: "Python", urlIcon: "python.svg" },
+  { text: "Node Js", urlIcon: "node.svg" },
+  { text: "Flutter", urlIcon: "flutter.svg" },
+  { text: "Postgres", urlIcon: "postgres.svg" },
+  { text: "Figma", urlIcon: "figma.svg" },
+  { text: "Next Js", urlIcon: "nextjs.svg" },
+  { text: "Git", urlIcon: "git.svg" },
 ]
 ---
 
-<section class="w-full mt-3">
-  <h2>Habilidades</h2>
-  <div class="grid grid-rows-2 grid-flow-col gap-4 ">
+<section class="w-full mt-24" id="skills">
+  <h2 class="text-sectionTitle text-4xl font-bold">Habilidades</h2>
+  <div class="grid grid-cols-5 gap-6 lg:grid-cols-6 lg:gap-y-5 lg:gap-x-20 mt-8 ">
     {
       skillList.map(skill => (
-        <SkillCard name={skill.name} src={skill.urlIcon} alt={skill.alt}/>
+        <SkillCard
+          text={skill.text}
+          urlIcon={skill.urlIcon}
+        />
       ))
     }
   </div>

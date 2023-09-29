@@ -1,0 +1,49 @@
+---
+const { id, nombre, description, urlDemo, urlCode, urlPhoto, tags  } = Astro.props;
+---
+
+<article class="flex flex-col md:flex-row space-x-0 md:space-x-10 justify-between space-y-10 md:space-y-0">
+  <div class="flex flex-col space-y-5 md:w-[50%] lg:w-[55%]">
+    <h3 class="font-bold text-smallCircleGradient">{nombre}</h3>
+    <div class="flex flex-wrap">
+      {
+        tags?.map((tag, index) => (
+          <span class={`font-medium text-black text-center bg-pText rounded-full text-sm py-1 px-2 ${index !== tags.length -1 && "mr-2"} mb-2`}>{tag}</span>
+        ))
+      }
+    </div>
+
+    <p id={"p-" + id} class="text-textProject"></p>
+
+    <div class="flex space-x-4 ">
+      <a
+        class="text-black bg-smallCircleGradient rounded-lg p-2"
+        href={urlDemo}>Ver proyecto
+      </a>
+      {
+        urlCode !== "" &&
+          <a
+            class="bg-transparent border border-white rounded-lg p-2"
+            href={urlCode}>Ver código
+          </a>
+      }
+    </div>
+
+  </div>
+
+  <div class="relative w-full md:w-[50%] lg:w-[40%] flex justify-center items-center">
+    <img class="object-cover h-[90%] md:h-[50%] lg:h-[70%] w-full" src={urlPhoto} alt="">
+  </div>
+</article>
+
+<style is:global>
+  .destacado {
+    color: #C1DFF9;
+    font-weight: bold;
+  }
+</style>
+
+<script define:vars={{description, id}}>
+  const contenedor = document.getElementById(`p-${id}`);
+  contenedor.innerHTML = description;
+</script>

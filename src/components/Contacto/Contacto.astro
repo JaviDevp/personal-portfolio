@@ -1,0 +1,41 @@
+---
+const links = [
+  {
+    fileName: "github.svg",
+    urlTo:"",
+    alt: "",
+  },
+  {
+    fileName: "linkedin.svg",
+    urlTo:"",
+    alt: "",
+  },
+  {
+    fileName: "telegram.svg",
+    urlTo:"",
+    alt: "",
+  },
+]
+---
+
+<section>
+  <h2 class="text-sectionTitle text-4xl font-bold text-center">Contáctame</h2>
+  <div class="flex flex-col space-y-3 mt-8">
+    <div class="flex justify-center">  
+      <a
+        href="mailto:javier193061@gmail.com"
+        class="font-semibold bg-pText text-black py-1 px-2 rounded-lg"
+        >
+        Envíame un correo
+      </a>
+    </div>
+    <p class="text-pText text-center">o escríbeme por alguno de estos medios:</p>
+    <div class="flex justify-center space-x-6">
+      {
+        links.map(contact => (
+          <img src={"/contacts/" + contact.fileName} alt={contact.alt}>
+        ))
+      }
+    </div>
+  </div>
+</section>
