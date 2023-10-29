@@ -4,23 +4,52 @@ const projects = [
   {
     id:1,
     nombre: "Rompecabezas online",
-    description: "Lorem ipsum dolor sit amet consectetur.<br/> <span class='destacado'>palabras destacadas</span> Aliquet habitasse pharetra aliquet lobortis pellentesque porttitor.Nascetur nunc quis platea semper at purus lacus scelerisque. Pellentesque nunc ultricies elementum ornare mi magna faucibus tellus. In et cursus maecenas etiam nunc nunc id in dapibus. Tincidunt at mi id diam erat maecenas.",
-    //description: "Lorem <strong>ipsum</strong> dolor sit amet <strong>consectetur</strong>. Aliquet habitasse",
+    description: "Aplicación web de rompecabezas en la que los usuarios pueden disfrutar de desafiantes puzles en línea. Esta aplicación, construida con React, presenta una característica única: la capacidad de obtener imágenes atractivas de la <span class='destacado'>API de Pexels</span> mediante React-Query, lo que permite a los usuarios elegir sus <span class='destacado'>categorías de imágenes</span> preferidas para armar sus rompecabezas.<br/> Es una experiencia interactiva que combina entretenimiento y personalización para los amantes de los rompecabezas en línea.",
     urlDemo: "",
     urlCode: "asdf",
     urlPlayStore: "",
-    urlPhoto: "https://images2.alphacoders.com/130/1308322.jpeg",
-    tags: ["React Js", "Tailwind", "Vercel", "React Query", "React Js", "Tailwind", "Vercel", "React Query", "React Js", "Tailwind", "Vercel", "React Query"]
+    photoName: "1.png",
+    tags: ["Next Js", "Firebase", "Typescript", "react-hook-forms", "React-player", "Tailwind"]
   },
   {
     id:2,
-    nombre: "Rompecabezas online",
-    description: "Lorem ipsum dolor sit amet consectetur. Aliquet habitasse pharetra aliquet lobortis pellentesque porttitor. Nascetur nunc quis platea semper at purus lacus scelerisque. Pellentesque nunc ultricies elementum ornare mi magna faucibus tellus. In et cursus maecenas etiam nunc nunc id in dapibus. Tincidunt at mi id diam erat maecenas.",
+    nombre: "iDomus Website",
+    description: "Desarrollé el sitio web para la empresa <span class='destacado'>iDomus</span>, una startup local del sector de materiales de construcción. Este proyecto permitió a la empresa presentar sus diversos servicios, que incluyen pedidos de materiales en línea a través de su aplicación, <span class='destacado'>servicios</span> de transporte de materiales, asesoramiento, supervisión de obras y construcción de obras civiles.<br/> iDomus se benefició de esta página de presentación para conectar con su audiencia y mostrar su oferta de manera efectiva.",
     urlDemo: "",
     urlCode: "asdf",
     urlPlayStore: "",
-    urlPhoto: "https://images2.alphacoders.com/130/1308322.jpeg",
-    tags: ["React Js", "Tailwind", "Vercel", "React Query"]
+    photoName: "2.png",
+    tags: ["Next Js", "Email js", "framer-motion"]
+  },
+  {
+    id:3,
+    nombre: "Netflix-clone",
+    description: "En mi proyecto Netflix-Clone, he replicado la interfaz de usuario de Netflix utilizando <span class='destacado'>Next.js</span>, Firebase para autenticación, React Hook Forms, Tailwind para estilos y TypeScript.<br/> Además, integramos la <span class='destacado'>API de IMDb</span> para enriquecer la experiencia del usuario con información detallada de películas y la capacidad de ver trailers utilizando React Player.",
+    urlDemo: "",
+    urlCode: "",
+    urlPlayStore: "",
+    photoName: "3.png",
+    tags: ["Next Js", "Firebase", "Typescript", "react-hook-forms", "React-player", "Tailwind"]
+  },
+  {
+    id:4,
+    nombre: "C4-Maker",
+    description: "C4 Maker, una aplicación web <span class='destacado'>colaborativa</span> que simplifica la creación de modelos C4, permitiendo a los usuarios trabajar de forma conjunta en la elaboración de estos <span class='destacado'>diagramas</span>. <br/> Esta aplicación utiliza diversas tecnologías, incluyendo React para la interfaz de usuario, Firebase para la autenticación, Redux para la gestión de estado, Socket.io para <span class='destacado'>comunicación en tiempo real</span> y Tailwind CSS para el diseño. C4 Maker ofrece una solución eficiente y colaborativa para la creación de modelos arquitectónicos C4.",
+    urlDemo: "",
+    urlCode: "asdf",
+    urlPlayStore: "",
+    photoName: "4.png",
+    tags: ["Socket.io", "Redux", "React js", "Firebase", "Tailwind"]
+  },
+  {
+    id:5,
+    nombre: "Control de dispositivos iot",
+    description: "Aplicación de <span class='destacado'>control de dispositivos IoT</span> utilizando Flutter. Esta aplicación ofrece un control integral de dispositivos domésticos, permitiendo acciones como encender y apagar focos, cambiar su color, ajustar el brillo y verificar su estado, además de proporcionar un control remoto para televisores. Una característica destacada es el <span class='destacado'>control por voz</span>, habilitado a través de <span class='destacado'>Dialogflow</span> para interpretar comandos de voz que son transmitidos a un servidor de <span class='destacado'>OpenHAB</span>, que administra los dispositivos. Este proyecto proporciona una solución completa y conveniente para la automatización y el control de dispositivos IoT en el hogar.",
+    urlDemo: "",
+    urlCode: "asdf",
+    urlPlayStore: "",
+    photoName: "5.png",
+    tags: ["Flutter", "dialog-flow", "OpenHab", "iot", "speech-to-text", "provider"]
   }
 ]
 ---
@@ -36,7 +65,7 @@ const projects = [
           description={project.description}
           urlDemo={project.urlDemo}
           urlCode={project.urlCode}
-          urlPhoto={project.urlPhoto}
+          photoName={project.photoName}
           tags={project.tags}
         />
       ))

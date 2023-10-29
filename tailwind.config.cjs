@@ -12,7 +12,8 @@ module.exports = {
         circleGradient: "#001F3F",
         smallCircleGradient: "#F0A500",
         smallCircleGradientMoving: "#C70039",
-        textFooter: "#8BA8C2"
+        textFooter: "#8BA8C2",
+        circleMouse: "#5F89AF",
       },
     },
   },

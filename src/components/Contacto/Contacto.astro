@@ -2,19 +2,19 @@
 const links = [
   {
     fileName: "github.svg",
-    urlTo:"",
-    alt: "",
+    urlTo:"https://github.com/JaviDevp/JaviDevp",
+    alt: "github-icon",
   },
   {
     fileName: "linkedin.svg",
-    urlTo:"",
-    alt: "",
+    urlTo:"https://www.linkedin.com/in/javier-vidal-dev/",
+    alt: "linkedin.svg",
   },
-  {
+  /* {
     fileName: "telegram.svg",
     urlTo:"",
     alt: "",
-  },
+  }, */
 ]
 ---
 
@@ -23,7 +23,7 @@ const links = [
   <div class="flex flex-col space-y-3 mt-8">
     <div class="flex justify-center">  
       <a
-        href="mailto:javier193061@gmail.com"
+        href="mailto:javiervidal.dev@gmail.com"
         class="font-semibold bg-pText text-black py-1 px-2 rounded-lg"
         >
         Envíame un correo
@@ -33,7 +33,7 @@ const links = [
     <div class="flex justify-center space-x-6">
       {
         links.map(contact => (
-          <img src={"/contacts/" + contact.fileName} alt={contact.alt}>
+          <a target="_blank" href={contact.urlTo}><img src={"/contacts/" + contact.fileName} alt={contact.alt}></a>
         ))
       }
     </div>

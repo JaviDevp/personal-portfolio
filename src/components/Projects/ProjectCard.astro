@@ -1,9 +1,9 @@
 ---
-const { id, nombre, description, urlDemo, urlCode, urlPhoto, tags  } = Astro.props;
+const { id, nombre, description, urlDemo, urlCode, photoName, tags  } = Astro.props;
 ---
 
-<article class="flex flex-col md:flex-row space-x-0 md:space-x-10 justify-between space-y-10 md:space-y-0">
-  <div class="flex flex-col space-y-5 md:w-[50%] lg:w-[55%]">
+<article class="flex flex-col md:flex-row space-x-0 justify-between space-y-10 md:space-y-0">
+  <div class=" flex flex-col space-y-5 md:w-[50%] lg:w-[55%]">
     <h3 class="font-bold text-smallCircleGradient">{nombre}</h3>
     <div class="flex flex-wrap">
       {
@@ -31,8 +31,8 @@ const { id, nombre, description, urlDemo, urlCode, urlPhoto, tags  } = Astro.pro
 
   </div>
 
-  <div class="relative w-full md:w-[50%] lg:w-[40%] flex justify-center items-center">
-    <img class="object-cover h-[90%] md:h-[50%] lg:h-[70%] w-full" src={urlPhoto} alt="">
+  <div class=" relative w-full md:w-[50%] lg:w-[43%] flex justify-center items-center">
+    <img class="object-contain h-[100%] md:h-[50%] lg:h-[70%] w-full" src={`/images/${photoName}`} alt="">
   </div>
 </article>
 
