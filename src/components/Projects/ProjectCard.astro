@@ -16,15 +16,24 @@ const { id, nombre, description, urlDemo, urlCode, photoName, tags  } = Astro.pr
     <p id={"p-" + id} class="text-textProject"></p>
 
     <div class="flex space-x-4 ">
-      <a
-        class="text-black bg-smallCircleGradient rounded-lg p-2"
-        href={urlDemo}>Ver proyecto
-      </a>
+      { urlDemo !== "" &&
+        <a
+          class="text-black bg-smallCircleGradient rounded-lg p-2"
+          href={urlDemo}
+          target="_blank"
+        >
+          Ver proyecto
+        </a>
+
+      }
       {
         urlCode !== "" &&
           <a
             class="bg-transparent border border-white rounded-lg p-2"
-            href={urlCode}>Ver código
+            href={urlCode}
+            target="_blank"
+          >
+            Ver código
           </a>
       }
     </div>
